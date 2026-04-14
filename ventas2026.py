@@ -10,7 +10,7 @@ st.set_page_config(layout='wide', page_title="Análisis de Clientes y Productos"
 @st.cache_data
 def load_data():
     # Asegúrate de que esta ruta sea la misma que en tu GitHub
-    file_path = 'datosII/SalidaVentas.xlsx' 
+    file_path = 'datos/SalidaVentas.xlsx' 
     df = pd.read_excel(file_path)
     if 'Order Date' in df.columns:
         df['Order Date'] = pd.to_datetime(df['Order Date'])
